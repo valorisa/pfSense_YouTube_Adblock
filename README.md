@@ -42,7 +42,7 @@ pfSense-YouTube-Adblock/
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/votre-utilisateur/pfSense-YouTube-Adblock.git
+git clone https://github.com/valirisa/pfSense-YouTube-Adblock.git
 cd pfSense-YouTube-Adblock
 
 # Copier les scripts dans pfSense
