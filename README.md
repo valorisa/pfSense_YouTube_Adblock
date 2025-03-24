@@ -114,7 +114,7 @@ les conditions de la licence et mentionner l’auteur original.
   - Liste des appareils testés (ex : Android TV, Chrome v98).
   ```
   
-  - **Code de conduite** (ex : respect des contributeurs).
+- **Code de conduite** (ex : respect des contributeurs).
 
 ---
 
