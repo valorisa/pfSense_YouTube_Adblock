@@ -1,7 +1,8 @@
 # pfSense-YouTube-Adblock 🔒🚫
+
 _Blocage réseau des publicités YouTube via pfSense avec inspection SSL et filtrage DNS._
 
-### **1. Structure Recommandée du Projet GitHub**
+## **1. Structure Recommandée du Projet GitHub**
 
 ```bash
 pfSense-YouTube-Adblock/
@@ -19,18 +20,17 @@ pfSense-YouTube-Adblock/
 └── .github/
     ├── ISSUE_TEMPLATE/     # Modèles pour les issues
     └── workflows/          # CI/CD (optionnel)
-``` 
+```
 
+## **2. Fonctionnalités**
 
-### **2. Fonctionnalités**
 - ✅ Blocage des publicités **pré-roll**, **mid-roll** et **display** sur YouTube.
 - 🔒 Inspection SSL pour analyser le trafic HTTPS.
 - 📦 Scripts automatisés de mise à jour des listes de blocage.
 - 📡 Compatible avec tous les appareils du réseau (PC, mobile, TV).
 
----
+## **3. Prérequis**
 
-### **3. Prérequis**
 - Matériel :
   - Routeur pfSense ([guide d'installation](https://docs.netgate.com/pfsense/en/latest/install/install-pfsense.html)).
   - 2 Go de RAM minimum (pour l’inspection SSL).
@@ -38,9 +38,8 @@ pfSense-YouTube-Adblock/
   - pfSense 2.6+.
   - Accès root (SSH ou interface web).
 
----
+## **4. Installation Rapide**
 
-### **4. Installation Rapide**
 ```bash
 # Cloner le dépôt
 git clone https://github.com/votre-utilisateur/pfSense-YouTube-Adblock.git
@@ -55,8 +54,10 @@ ssh admin@pfsense.local /usr/local/bin/ssl_inspection_setup.sh
 
 ---
 
-### **5. Configuration des Listes de Blocage**
+## **5. Configuration des Listes de Blocage**
+
 - **Fichier de configuration** : `config-examples/pfblockerng.yaml`
+
   ```yaml
   dnsbl:
     feeds:
@@ -66,10 +67,10 @@ ssh admin@pfsense.local /usr/local/bin/ssl_inspection_setup.sh
       - "i.ytimg.com"  # Nécessaire pour les miniatures
   ```
 
----
+## **6. Scripts Automatisés**
 
-### **6. Scripts Automatisés**
 - **Mise à jour des listes** (`scripts/update_blocklists.sh`) :
+
   ```bash
   #!/bin/sh
   # Télécharge les domaines de pubs YouTube
@@ -78,18 +79,18 @@ ssh admin@pfsense.local /usr/local/bin/ssl_inspection_setup.sh
   pfctl -t youtube_ads -T replace -f /tmp/yt_ads.txt
   ```
 
----
+## **7. Documentation Complète**
 
-### **7. Documentation Complète**
 Créez un Wiki GitHub ou un dossier `docs` avec :
+
 - **Guide d’installation pas à pas** avec captures d’écran.
 - **FAQ** (ex : « Pourquoi les pubs mid-roll persistent ? »).
 - **Avertissements légaux** (risques de contournement des CGU YouTube).
 
----
+## **8. Licence**
 
-### **8. Licence**
 Choisissez une licence open source (ex: **GPLv3**) pour permettre la réutilisation et les contributions. Exemple de `LICENSE` :
+
 ```text
 Ce projet est sous licence GPLv3. Toute utilisation commerciale doit respecter 
 les conditions de la licence et mentionner l’auteur original.
@@ -97,21 +98,28 @@ les conditions de la licence et mentionner l’auteur original.
 
 ---
 
-### **9. Contribution**
+## **9. Contribution**
+
 - **Modèle de Pull Request** :
+
   ```markdown
   ## Description des changements
   - [ ] Correction de bugs
   - [ ] Ajout de fonctionnalités
+  ```
   
   ## Tests effectués
+  
+  ```markdown
   - Liste des appareils testés (ex : Android TV, Chrome v98).
   ```
-- **Code de conduite** (ex : respect des contributeurs).
+  
+  - **Code de conduite** (ex : respect des contributeurs).
 
 ---
 
-### **10. Captures d’Écran et Démo**
+## **10. Captures d’Écran et Démo**
+
 - Ajoutez des visuels :
   - Interface pfBlockerNG avec les règles YouTube.
   - Avant/Après le blocage (ex : vidéo sans pub).
@@ -120,6 +128,7 @@ les conditions de la licence et mentionner l’auteur original.
 ---
 
 ## **Promotion et Communauté**
+
 - Partagez le projet sur :
   - **Reddit** : r/pfsense, r/selfhosted.
   - **Forums** : Netgate Forum, GitHub Discussions.
@@ -128,6 +137,7 @@ les conditions de la licence et mentionner l’auteur original.
 ---
 
 ## **Exemple de Projets Inspirants**
+
 - [Pi-hole](https://github.com/pi-hole/pi-hole) → Gestion des blocages DNS.
 - [pfBlockerNG](https://github.com/pfsense/pfsense-pkg-pfBlockerNG) → Filtrage avancé.
 
