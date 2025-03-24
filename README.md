@@ -7,16 +7,16 @@ _Blocage réseau des publicités YouTube via pfSense avec inspection SSL et filt
 ```bash
 pfSense-YouTube-Adblock/
 ├── README.md               # Documentation principale
-├── REALICENSE                 # Licence (GPLv3, MIT, etc.)
-├── /
+├── LICENSE                 # Licence (GPLv3, MIT, etc.)
+├── scripts
 │   ├── update_blocklists.sh  # Script de mise à jour des listes
-│   ├└── ssl_inspection_setup.sh  # Configuration automatique SSL
+│   ├── ssl_inspection_setup.sh  # Configuration automatique SSL
 ├── config-examples/        # Fichiers de configuration
 │   ├── pfblockerng.yaml    # Exemple de règles pfBlockerNG
-│   ├└── squid.conf          # Configuration Squid pour SSL Inspection
+│   ├── squid.conf          # Configuration Squid pour SSL Inspection
 ├── docs/
 │   ├── installation_guide.md  # Guide détaillé
-│   ├└── troubleshooting.md  # Problèmes courants
+│   ├── troubleshooting.md  # Problèmes courants
 └── .github/
     ├── ISSUE_TEMPLATE/     # Modèles pour les issues
     └── workflows/          # CI/CD (optionnel)
