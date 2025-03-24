@@ -1,0 +1,11 @@
+name: CI
+on: [push]
+
+jobs:
+  lint-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Vérifier les scripts
+        run: |
+          shellcheck scripts/*.sh

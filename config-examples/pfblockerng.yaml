@@ -1,0 +1,9 @@
+dnsbl:
+  enabled: true
+  feeds:
+    - name: "YouTube Ads"
+      url: "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
+      format: "hosts"
+  whitelist:
+    - "i.ytimg.com"
+    - "yt3.ggpht.com"
